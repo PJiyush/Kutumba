@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Navbar from './Navbar'
 
 function RegisterForm() {
     const [email, setEmail] = useState('')
@@ -22,6 +23,8 @@ function RegisterForm() {
     }
     
     return (
+        <>
+        <Navbar/>
         <div className='flex justify-center mt-28'>
             <form className=' w-4/12  border-solid bg-pink-400 px-10 rounded py-5' onSubmit={handleSubmit} >
                 <div className="mb-3  bg-pink-400">
@@ -51,6 +54,7 @@ function RegisterForm() {
                 <button type="submit" className="btn btn-primary bg-blue-600 flex mx-auto h-12 w-24  "><p className='text-xl bg-transparent flex mx-auto '>Log in</p></button>
             </form>
         </div>
+        </>
     )
 }
 

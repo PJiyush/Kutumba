@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Navbar from './Navbar'
 function Form() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -10,6 +11,8 @@ function Form() {
     }
     
     return (
+        <>
+        <Navbar/>
         <div className='flex justify-center mt-36'>
             <form className=' w-4/12  border-solid bg-pink-400 px-10 rounded py-5' onSubmit={handleSubmit} >
                 <div className="mb-3  bg-pink-400">
@@ -32,6 +35,7 @@ function Form() {
                 <button type="submit" className="btn btn-primary bg-blue-600 flex mx-auto h-12 w-24  "><p className='text-xl bg-transparent flex mx-auto '>Log in</p></button>
             </form>
         </div>
+        </>
     )
 }
 
