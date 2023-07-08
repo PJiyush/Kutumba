@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Navbar from './Navbar'
+import Kutumba from './Kutumba'
 function Form() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -13,7 +14,10 @@ function Form() {
     return (
         <>
         <Navbar/>
-        <div className='flex justify-center mt-36'>
+        <div className='flex justify-center mt-12 animate-pulse' >
+                <Kutumba/>
+        </div>
+        <div className='flex justify-center mt-12'>
             <form className=' w-4/12  border-solid bg-pink-400 px-10 rounded py-5' onSubmit={handleSubmit} >
                 <div className="mb-3  bg-pink-400">
                     <label htmlFor="exampleInputEmail1" className="form-label  bg-pink-400 text-2xl cursor-pointer">Email address</label>

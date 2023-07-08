@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Navbar from './Navbar'
+import Kutumba from './Kutumba'
 
 function RegisterForm() {
     const [email, setEmail] = useState('')
@@ -25,8 +26,11 @@ function RegisterForm() {
     return (
         <>
         <Navbar/>
-        <div className='flex justify-center mt-28'>
-            <form className=' w-4/12  border-solid bg-pink-400 px-10 rounded py-5' onSubmit={handleSubmit} >
+        <div className='flex justify-center mt-6 animate-pulse' >
+                <Kutumba/>
+        </div>
+        <div className='flex justify-center mt-6 '>
+            <form className=' w-4/12  border-solid bg-pink-400 px-10 rounded pt-5 pb-3' onSubmit={handleSubmit} >
                 <div className="mb-3  bg-pink-400">
                     <label htmlFor="exampleInputEmail1" className="form-label  bg-pink-400 text-2xl cursor-pointer">Email address</label>
                     <input type="email" className="border-2 bg-pink-200 text-gray-700 rounded-lg px-4 py-2  focus:outline-none form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={email} onChange={(e)=>setEmail(e.target.value)} />
@@ -51,7 +55,7 @@ function RegisterForm() {
                     {/* here login with google will come */}
                     
                 </div>
-                <button type="submit" className="btn btn-primary bg-blue-600 flex mx-auto h-12 w-24  "><p className='text-xl bg-transparent flex mx-auto '>Log in</p></button>
+                <button type="submit" className="btn btn-primary bg-blue-600 flex mx-auto h-12 w-24 -mt-6 "><p className='text-xl bg-transparent flex mx-auto '>Log in</p></button>
             </form>
         </div>
         </>

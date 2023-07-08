@@ -6,7 +6,9 @@ function Home() {
     return (
         <div>
             <Navbar/>
-            <Kutumba/>
+            <div className='flex justify-center mt-52 animate-pulse' >
+                <Kutumba/>
+            </div>
         </div>
     )
 }
