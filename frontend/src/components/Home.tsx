@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from './Navbar'
 import Kutumba from './Kutumba'
 import Card from './Card'
+import Button from './Button'
+import { Link } from 'react-router-dom'
 
 function Home() {
     return (
@@ -10,8 +12,8 @@ function Home() {
             <div className='flex justify-center mt-52 animate-pulse' >
                 <Kutumba/>
             </div>
-            <div className='ml-5'>
-                <Card bgColor="bg-cyan-400" height='h-96' width='w-80' textColor='text-white'/>
+            <div className='flex justify-center mt-10 h-16' >
+                <Link to="/profile" > <Button height='h-12' width='w-52' bgColor='bg-pink-400' textColor='text-white' text='Get Started' afterHover='hover:bg-blue-300' /></Link>
             </div>
         </div>
     )
